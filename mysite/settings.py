@@ -62,9 +62,7 @@ REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': ['rest_framework.AllowAny']}
 
 # This allows you to make HTTP request from a different origin like React app
 CORS_ORIGIN_ALLOW_ALL = True
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://e1e4f40b-f9c4-4bbb-ab22-8aac5c515940.us-east-1.cloud.genez.io"
+https://8fc380c0-4476-4f3a-8a99-f345f8d39208.us-east-1.cloud.genez.io
 ]
 
 
