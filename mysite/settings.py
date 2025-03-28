@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -47,7 +48,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
+
+
+# Add this line here
+#ensures it doesn't block React framework from interacting with django
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': ['rest_framework.AllowAny']}
+
+# This allows you to make HTTP request from a different origin like React app
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = 'mysite.urls'
 
