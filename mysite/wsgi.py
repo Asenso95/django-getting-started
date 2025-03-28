@@ -9,8 +9,15 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 
 import os
 
+import django
+
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+django.setup()
+
+from django.core.management import call_command
+call_command('migrate')  # This runs migrations automatically
+
 
 application = get_wsgi_application()
