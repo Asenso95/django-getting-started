@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tcq#je_t33%9(!(&8wycetd6o46@@awx-p*-vhw_8*#p2wxn+_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.genez.io']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
