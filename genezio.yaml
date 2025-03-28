@@ -1,3 +1,6 @@
+build:
+  commands:
+    - python manage.py migrate
 backend:
     functions:
         - entry: mysite/wsgi.py
