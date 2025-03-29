@@ -25,9 +25,7 @@ call_command('migrate')  # This runs migrations automatically
 # Create superuser automatically
 User = get_user_model()
 
-SUPERUSER_USERNAME = "admin"
-SUPERUSER_EMAIL = "admin@example.com"
-SUPERUSER_PASSWORD = "adminpassword123"
+
 
 if not User.objects.filter(username=SUPERUSER_USERNAME).exists():
     User.objects.create_superuser(
